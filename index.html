@@ -19,7 +19,7 @@ body, html {
 
 }
 .bgimg-1 {
-  background-image: url("fight.jpg");
+  background-image: url("christmas.jpg");
   height: 100%;
 }
 
@@ -51,15 +51,16 @@ h3 {
 </head>
 <body>
 <div class="bgimg-1">
-  <div class="caption">
+  <div class="caption" id="message">
     <span class="border">There are only</span><br>
     <span class="border" id="clock"></span><br>
-    <span class="border">until the election!</span>
+    <span class="border">until the christmas party!</span>
   </div>
 </div>
 
   <script>
-    var countDownDate = new Date("Dec 12, 2019 07:00:00").getTime();
+
+    var countDownDate = new Date("Dec 12, 2019 13:30:00").getTime();
     var x = setInterval(function() {
       var now = new Date().getTime();
       var distance = countDownDate - now;
@@ -73,7 +74,7 @@ h3 {
 
       if (distance < 0) {
         clearInterval(x);
-        document.getElementById("clock").innerHTML = "Zero. Go and Vote now!";
+        document.getElementById("message").innerHTML = "<span class=\"border\">Party time!! Lets go!</span>";
       }
     }, 1000);
   </script>
